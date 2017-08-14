@@ -50,7 +50,7 @@ bio.display = function() {
     $("#footerContacts").append(formattedGithub);
     $("#footerContacts").append(formattedTwitter);
     $("#footerContacts").append(formattedLocation);
-}
+};
 
 
 //work object
@@ -89,7 +89,7 @@ work.display = function() {
         $(".work-entry:last").append(formattedworkDescription);
 
     }
-}
+};
 
 //education object
 var education = {
@@ -134,7 +134,7 @@ education.display = function() {
     }
     $(".education-entry:last").append(HTMLonlineClasses);
 
-    for (var course = 0, len = education.onlineCourses.length; course < len; course++) {
+    for (var course = 0, l = education.onlineCourses.length; course < l; course++) {
         var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
         var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
         var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
@@ -144,7 +144,7 @@ education.display = function() {
         $(".education-entry:last").append(formattedonlineDates);
         $(".education-entry:last").append(formattedonlineURL);
     }
-}
+};
 
 //projects object
 var projects = {
@@ -175,12 +175,12 @@ projects.display = function() {
         $(".project-entry:last").append(formattedprojectDates);
         $(".project-entry:last").append(formattedprojectDescription);
 
-        for (var img = 0, len = projects.projects[project].images.length; img < len; img++) {
+        for (var img = 0, l = projects.projects[project].images.length; img < l; img++) {
             var formattedprojectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[img]);
             $(".project-entry:last").append(formattedprojectImage);
         }
     }
-}
+};
 
 /* functions calls for display */
 bio.display();
@@ -198,3 +198,4 @@ function inName(name) {
     return name[0] + " " + name[1];
 }
 //$("#main").append(internationalizeButton);
+
